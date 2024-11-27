@@ -1,0 +1,304 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+#terrain{
+    background-color: green;
+    width: 700px;
+    height: 90vh;
+    border: 2px solid white;
+    margin: auto;
+    position: relative;
+}
+#demiHaut{
+    position: relative;
+    border-bottom: 2px solid white;
+    height: 50%;
+}
+#gkH{
+    width: 30%;
+    height: 10vh;
+    border: 2px solid white;
+    margin: auto;
+    border-top: none;
+}
+#defH{
+    width: 60%;
+    height: 20vh;
+    border: 2px solid white;
+    border-top: none;
+    position: absolute;
+    left: calc(50% - 30%);
+    top: 0;
+    background-color: transparent;
+    z-index: 100;
+}
+#defDemiCerH{
+    width: 15%;
+    height: 15vh;
+    border: 3px solid white;
+    border-radius: 50%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    position: absolute;
+    z-index: 10;
+    left: calc(50% - 7.5%);
+    top: calc(20vh - 7.5vh);
+}
+#milieuDemiCerH{
+    width: 18%;
+    height: 18vh;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -9vh;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    left: calc(50% - 9%);
+    background-color: transparent;
+}
+
+#demiBas{
+    position: relative;
+    border-top: 2px solid white;
+    height: 50%;
+}
+#gkB{
+    width: 30%;
+    height: 10vh;
+    border: 2px solid white;
+    border-bottom: none;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 15%);
+}
+#defB{
+    width: 60%;
+    height: 20vh;
+    border: 2px solid white;
+    border-bottom: none;
+    position: absolute;
+    left: calc(50% - 30%);
+    bottom: 0;
+    background-color: transparent;
+    z-index: 100;
+}
+#defDemiCerB{
+    width: 15%;
+    height: 15vh;
+    border: 3px solid white;
+    border-radius: 50%;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    position: absolute;
+    z-index: 10;
+    left: calc(50% - 7.5%);
+    bottom: calc(20vh - 7.5vh);
+}
+#milieuDemiCerB{
+    width: 18%;
+    height: 18vh;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: -9vh;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    left: calc(50% - 9%);
+    background-color: transparent;
+}
+.player{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: transparent;
+    z-index: 100;
+    text-align: center;
+}
+.gk{
+    bottom: 0px;
+    left: calc(50% - 50px);
+    background-color: transparent;
+    z-index: 100;
+}
+.cb1{
+    bottom: 100px;
+    left: 180px;
+}
+.cb2{
+    bottom: 100px;
+    right: 180px;
+}
+.lb{
+    bottom: 130px;
+    left: 60px;
+}
+.rb{
+    bottom: 130px;
+    right: 60px;
+}
+.cm1{
+    bottom: 300px;
+    left: 90px;
+}
+.cm2{
+    bottom: 300px;
+    left: calc(50% - 50px);
+}
+.cm3{
+    bottom: 300px;
+    right: 90px;
+}
+.st{
+    top: 100px;
+    left: calc(50% - 50px);
+}
+.rw{
+    top: 100px;
+    right: 60px;
+}
+.lw{
+    top: 100px;
+    left: 60px;
+}
+img.playerImage{
+    width: 90px;
+    margin: 0 auto 0 auto;
+    display: block;
+    background-color: transparent;
+    border: 1px solid rgb(30, 15, 107);
+    border-radius: 50%;
+}
+#buttons img{
+    width: 20px;
+}
+#buttons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 5px;
+    background-color: transparent;
+}
+#fourniture{
+    background-color: transparent;
+}
+.tete{
+    width: 50px;
+    height: 50px;
+    background-color: grey;
+    border-radius: 50%;
+    margin: 0 auto 0 auto;
+}
+.poitrine{
+    width: 90px;
+    height: 50px;
+    background-color: grey;
+    border-radius: 50%;
+    margin: 3px auto 0 auto;
+}
+.btnDelete, .btnModify{
+    display: none;
+}
+#formAdd{
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 25vw);
+    width: 50vw;
+    height: 80vh;
+    background-color:rgba(36, 18, 69, 0.7);
+    z-index: 100;
+    border-radius: 50px;
+    color: white;
+    padding-top: 10px;
+}
+#playersList{
+    height: 500px;
+    overflow-y: scroll;
+}
+.option img{
+    width: 60px;
+    display: block;
+    border-radius: 50%;
+}
+.option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+#buttonAddForm button{
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: chocolate;
+    border: none;
+    border-radius: 5px;
+}
+#buttonAddForm{
+    display: flex;
+    justify-content: space-around;
+}
+
+#formModify{
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 25vw);
+    width: 50vw;
+    height: 80vh;
+    background-color:rgba(36, 18, 69, 0.7);
+    z-index: 100;
+    border-radius: 50px;
+    color: white;
+    padding-top: 10px;
+}
+
+#buttonModifyForm button{
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: chocolate;
+    border: none;
+    border-radius: 5px;
+}
+#buttonModifyForm{
+    display: flex;
+    justify-content: space-around;
+}
+.addPlClicked{
+    background-color: rgb(71, 71, 61);
+}
+
+/* Les media query */
+@media only screen and (max-width: 728px){
+    #terrain{
+        width: 400px;
+    }
+    #milieuDemiCerB{
+        width: 100px;
+        height: 100px;
+        top: -50px;
+        left: calc(50% - 50px);
+    }
+    #defDemiCerB{
+        width: 90px;
+        left: calc(50% - 45px);
+    }
+    #milieuDemiCerH{
+        width: 100px;
+        height: 100px;
+        bottom: -50px;
+        left: calc(50% - 50px);
+    }
+    #defDemiCerH{
+        width: 90px;
+        left: calc(50% - 45px);
+    }
+}
