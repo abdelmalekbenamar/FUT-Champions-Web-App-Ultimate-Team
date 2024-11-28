@@ -1,5 +1,5 @@
 
-let data =  [
+let data1 =  [
     {
       "name": "Lionel Messi",
       "photo": "https://cdn.sofifa.net/players/158/023/25_120.png",
@@ -416,7 +416,7 @@ let data =  [
       "positioning": 85
     }
   ];
-
+let data = data1.slice();
   //async for button add player
 function addClassToOption(){
     let formAjouter = document.getElementById("formAdd");
@@ -776,6 +776,7 @@ function addClassToOption(){
     });
   });
 
+
   //button cancel add form
   let btnCancelAdd = document.getElementById("cancelAdd");
   btnCancelAdd.addEventListener("click", () => {
@@ -790,8 +791,65 @@ function addClassToOption(){
   btnSaveAdd.addEventListener("click", () => {
     let lElement = document.querySelector(".addPlClicked");
     if(lElement){
-
+      let nomJoueur = lElement.querySelector(".playerName").textContent;
+      let positionJoueur = lElement.querySelector(".hidden-pos").textContent;
+      for(let i = 0; i < data.length; i++){
+        if(data[i].name == nomJoueur){
+          let imgPlayerTerrain = document.createElement("img");
+          let namePlayerTerrain = document.createElement("p");
+          let positionTerrain = document.createElement("p");
+          imgPlayerTerrain.src = data[i].photo;
+          imgPlayerTerrain.className = "playerImage";
+          namePlayerTerrain.textContent = data[i].name;
+          namePlayerTerrain.className = "namePlayerTerrain";
+          positionTerrain.textContent = data[i].position;
+          positionTerrain.className = "position";
+          let placementJoueurTerrain = document.querySelector(`.${positionJoueur}`);
+          let fourniture = placementJoueurTerrain.querySelector("#fourniture");
+          fourniture.innerHTML = "";
+          fourniture.appendChild(imgPlayerTerrain);
+          fourniture.appendChild(namePlayerTerrain);
+          fourniture.appendChild(positionTerrain);
+          placementJoueurTerrain.querySelector(".btnDelete").style.display = "block";
+          placementJoueurTerrain.querySelector(".btnModify").style.display = "block";
+          placementJoueurTerrain.querySelector(".btnAddd").style.display = "none";
+          //fermer le formulaire
+          let formAddDesactivate = document.getElementById("formAdd");
+          formAddDesactivate.style.display = "none";
+          let listPlay = formAddDesactivate.querySelector("#playersList");
+          listPlay.innerHTML = "";
+          data.splice(i,1);
+        }
+      }
     }else{
       alert("Veuillez selectionner un element");
     }
+  });
+  //create delete button
+  let deleteButtons = document.querySelectorAll(".btnDelete");
+  deleteButtons.forEach(el => {
+    el.addEventListener("click", () => {
+      let parentElement = el.parentNode.parentNode;
+      let fournitureTerrain = parentElement.querySelector("#fourniture");
+      let nomPlayerTerrainNode = parentElement.querySelector(".namePlayerTerrain");
+      let nomPlayerTerrain = nomPlayerTerrainNode.textContent;
+      let poitrine = document.createElement("div");
+      poitrine.className = "poitrine";
+      let tete = document.createElement("div");
+      tete.className = "tete";
+      fournitureTerrain.innerHTML = "";
+      fournitureTerrain.appendChild(tete);
+      fournitureTerrain.appendChild(poitrine);
+      let buttonModify = parentElement.querySelector(".btnModify");
+      let buttonDelete = parentElement.querySelector(".btnDelete");
+      let buttonAdd = parentElement.querySelector(".btnAddd");
+      buttonModify.style.display = "none";
+      buttonDelete.style.display = "none";
+      buttonAdd.style.display = "block";
+      for(let i = 0; i < data1.length; i++){
+        if(data1[i].name == nomPlayerTerrain){
+          data.push(data1[i]);
+        }
+      }
+    });
   })

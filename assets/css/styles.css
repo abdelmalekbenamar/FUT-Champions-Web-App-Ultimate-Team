@@ -143,27 +143,27 @@
     right: 60px;
 }
 .cm1{
-    bottom: 300px;
+    bottom: 320px;
     left: 90px;
 }
 .cm2{
-    bottom: 300px;
+    bottom: 320px;
     left: calc(50% - 50px);
 }
 .cm3{
-    bottom: 300px;
+    bottom: 320px;
     right: 90px;
 }
 .st{
-    top: 100px;
+    top: 30px;
     left: calc(50% - 50px);
 }
 .rw{
-    top: 100px;
+    top: 30px;
     right: 60px;
 }
 .lw{
-    top: 100px;
+    top: 30px;
     left: 60px;
 }
 img.playerImage{
@@ -171,7 +171,6 @@ img.playerImage{
     margin: 0 auto 0 auto;
     display: block;
     background-color: transparent;
-    border: 1px solid rgb(30, 15, 107);
     border-radius: 50%;
 }
 #buttons img{

@@ -416,3 +416,10 @@ let data =  [
       "positioning": 85
     }
   ];
+// let data2 = data;
+let data3 = data.slice()
+console.log(data)
+// console.log(data2)
+ data3.splice(0,2);
+
+console.log("=======>",data3)
