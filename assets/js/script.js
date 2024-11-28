@@ -417,9 +417,26 @@ let data1 =  [
     }
   ];
 let data = data1.slice();
+let playerNameModify = "";
   //async for button add player
-function addClassToOption(){
+  function addClassToOption(){
     let formAjouter = document.getElementById("formAdd");
+    let optionss = formAjouter.querySelectorAll(".option");
+    optionss.forEach(el => {
+        el.addEventListener("click", () => {
+            let elemDejaSelect = document.querySelector(".addPlClicked");
+            if(elemDejaSelect){
+                elemDejaSelect.classList.remove("addPlClicked")
+                el.classList.add("addPlClicked")
+            }else{
+                el.classList.add("addPlClicked")
+            }
+        })
+    })
+  }
+
+  function addClassToOptionModify(){
+    let formAjouter = document.getElementById("formModify");
     let optionss = formAjouter.querySelectorAll(".option");
     optionss.forEach(el => {
         el.addEventListener("click", () => {
@@ -852,4 +869,370 @@ function addClassToOption(){
         }
       }
     });
+  })
+
+  //create modify button
+  let modifyButtons = document.querySelectorAll(".btnModify");
+  modifyButtons.forEach(el => {
+    el.addEventListener("click", () => {
+      let formModifyPlayer = document.getElementById("formModify");
+      formModifyPlayer.style.display = "block";
+      let namePlayerParentNode = el.parentNode.parentNode;
+      let namePlayerNode = namePlayerParentNode.querySelector(".namePlayerTerrain");
+      playerNameModify = namePlayerNode.textContent;
+      console.log(playerNameModify)
+     
+      if(namePlayerParentNode.className.includes("rw")){
+        let listJoueurs = data.filter(ell => {
+          return ell.position == "RW"
+        });
+        listJoueurs.forEach(ell => {
+
+                let myOption = document.createElement("div");
+                myOption.className = "option";
+                let myImage = document.createElement("img");
+                myImage.src = ell.photo;
+                let namePlayer = document.createElement("p");
+                namePlayer.className = "playerName";
+                namePlayer.textContent = ell.name;
+                let ratingPlayer = document.createElement("p");
+                ratingPlayer.className = "playerRating";
+                ratingPlayer.textContent = "Rating :" + ell.rating
+                let cachePosition = document.createElement("p");
+                cachePosition.className = "hidden-pos";
+                cachePosition.innerText = "rw";
+                cachePosition.style.display = "none";
+                myOption.appendChild(myImage);
+                myOption.appendChild(namePlayer);
+                myOption.appendChild(ratingPlayer);
+                myOption.appendChild(cachePosition);
+                let listModifyForm = formModifyPlayer.querySelector("#playersList");
+                listModifyForm.appendChild(myOption);
+                addClassToOptionModify()
+
+        })
+      }
+
+      if(namePlayerParentNode.className.includes("st")){
+        let listJoueurs = data.filter(ell => {
+          return ell.position == "ST"
+        });
+        listJoueurs.forEach(ell => {
+
+                let myOption = document.createElement("div");
+                myOption.className = "option";
+                let myImage = document.createElement("img");
+                myImage.src = ell.photo;
+                let namePlayer = document.createElement("p");
+                namePlayer.className = "playerName";
+                namePlayer.textContent = ell.name;
+                let ratingPlayer = document.createElement("p");
+                ratingPlayer.className = "playerRating";
+                ratingPlayer.textContent = "Rating :" + ell.rating
+                let cachePosition = document.createElement("p");
+                cachePosition.className = "hidden-pos";
+                cachePosition.innerText = "rw";
+                cachePosition.style.display = "none";
+                myOption.appendChild(myImage);
+                myOption.appendChild(namePlayer);
+                myOption.appendChild(ratingPlayer);
+                myOption.appendChild(cachePosition);
+                let listModifyForm = formModifyPlayer.querySelector("#playersList");
+                listModifyForm.appendChild(myOption);
+                addClassToOptionModify()
+
+        })
+      }
+
+      if(namePlayerParentNode.className.includes("lw")){
+        let listJoueurs = data.filter(ell => {
+          return ell.position == "LW"
+        });
+        listJoueurs.forEach(ell => {
+
+                let myOption = document.createElement("div");
+                myOption.className = "option";
+                let myImage = document.createElement("img");
+                myImage.src = ell.photo;
+                let namePlayer = document.createElement("p");
+                namePlayer.className = "playerName";
+                namePlayer.textContent = ell.name;
+                let ratingPlayer = document.createElement("p");
+                ratingPlayer.className = "playerRating";
+                ratingPlayer.textContent = "Rating :" + ell.rating
+                let cachePosition = document.createElement("p");
+                cachePosition.className = "hidden-pos";
+                cachePosition.innerText = "rw";
+                cachePosition.style.display = "none";
+                myOption.appendChild(myImage);
+                myOption.appendChild(namePlayer);
+                myOption.appendChild(ratingPlayer);
+                myOption.appendChild(cachePosition);
+                let listModifyForm = formModifyPlayer.querySelector("#playersList");
+                listModifyForm.appendChild(myOption);
+                addClassToOptionModify()
+
+        })
+      }
+
+      if(namePlayerParentNode.className.includes("cm3")){
+        let listJoueurs = data.filter(ell => {
+          return ell.position == "CM"
+        });
+        listJoueurs.forEach(ell => {
+
+                let myOption = document.createElement("div");
+                myOption.className = "option";
+                let myImage = document.createElement("img");
+                myImage.src = ell.photo;
+                let namePlayer = document.createElement("p");
+                namePlayer.className = "playerName";
+                namePlayer.textContent = ell.name;
+                let ratingPlayer = document.createElement("p");
+                ratingPlayer.className = "playerRating";
+                ratingPlayer.textContent = "Rating :" + ell.rating
+                let cachePosition = document.createElement("p");
+                cachePosition.className = "hidden-pos";
+                cachePosition.innerText = "rw";
+                cachePosition.style.display = "none";
+                myOption.appendChild(myImage);
+                myOption.appendChild(namePlayer);
+                myOption.appendChild(ratingPlayer);
+                myOption.appendChild(cachePosition);
+                let listModifyForm = formModifyPlayer.querySelector("#playersList");
+                listModifyForm.appendChild(myOption);
+                addClassToOptionModify()
+
+        })
+      }
+
+      if(namePlayerParentNode.className.includes("cm2")){
+        let listJoueurs = data.filter(ell => {
+          return ell.position == "CM"
+        });
+        listJoueurs.forEach(ell => {
+
+                let myOption = document.createElement("div");
+                myOption.className = "option";
+                let myImage = document.createElement("img");
+                myImage.src = ell.photo;
+                let namePlayer = document.createElement("p");
+                namePlayer.className = "playerName";
+                namePlayer.textContent = ell.name;
+                let ratingPlayer = document.createElement("p");
+                ratingPlayer.className = "playerRating";
+                ratingPlayer.textContent = "Rating :" + ell.rating
+                let cachePosition = document.createElement("p");
+                cachePosition.className = "hidden-pos";
+                cachePosition.innerText = "rw";
+                cachePosition.style.display = "none";
+                myOption.appendChild(myImage);
+                myOption.appendChild(namePlayer);
+                myOption.appendChild(ratingPlayer);
+                myOption.appendChild(cachePosition);
+                let listModifyForm = formModifyPlayer.querySelector("#playersList");
+                listModifyForm.appendChild(myOption);
+                addClassToOptionModify()
+
+        })
+      }
+
+      if(namePlayerParentNode.className.includes("cm1")){
+        let listJoueurs = data.filter(ell => {
+          return ell.position == "CM"
+        });
+        listJoueurs.forEach(ell => {
+
+                let myOption = document.createElement("div");
+                myOption.className = "option";
+                let myImage = document.createElement("img");
+                myImage.src = ell.photo;
+                let namePlayer = document.createElement("p");
+                namePlayer.className = "playerName";
+                namePlayer.textContent = ell.name;
+                let ratingPlayer = document.createElement("p");
+                ratingPlayer.className = "playerRating";
+                ratingPlayer.textContent = "Rating :" + ell.rating
+                let cachePosition = document.createElement("p");
+                cachePosition.className = "hidden-pos";
+                cachePosition.innerText = "rw";
+                cachePosition.style.display = "none";
+                myOption.appendChild(myImage);
+                myOption.appendChild(namePlayer);
+                myOption.appendChild(ratingPlayer);
+                myOption.appendChild(cachePosition);
+                let listModifyForm = formModifyPlayer.querySelector("#playersList");
+                listModifyForm.appendChild(myOption);
+                addClassToOptionModify()
+
+        })
+      }
+
+      if(namePlayerParentNode.className.includes("rb")){
+        let listJoueurs = data.filter(ell => {
+          return ell.position == "RB"
+        });
+        listJoueurs.forEach(ell => {
+
+                let myOption = document.createElement("div");
+                myOption.className = "option";
+                let myImage = document.createElement("img");
+                myImage.src = ell.photo;
+                let namePlayer = document.createElement("p");
+                namePlayer.className = "playerName";
+                namePlayer.textContent = ell.name;
+                let ratingPlayer = document.createElement("p");
+                ratingPlayer.className = "playerRating";
+                ratingPlayer.textContent = "Rating :" + ell.rating
+                let cachePosition = document.createElement("p");
+                cachePosition.className = "hidden-pos";
+                cachePosition.innerText = "rw";
+                cachePosition.style.display = "none";
+                myOption.appendChild(myImage);
+                myOption.appendChild(namePlayer);
+                myOption.appendChild(ratingPlayer);
+                myOption.appendChild(cachePosition);
+                let listModifyForm = formModifyPlayer.querySelector("#playersList");
+                listModifyForm.appendChild(myOption);
+                addClassToOptionModify()
+
+        })
+      }
+
+      if(namePlayerParentNode.className.includes("lb")){
+        let listJoueurs = data.filter(ell => {
+          return ell.position == "LB"
+        });
+        listJoueurs.forEach(ell => {
+
+                let myOption = document.createElement("div");
+                myOption.className = "option";
+                let myImage = document.createElement("img");
+                myImage.src = ell.photo;
+                let namePlayer = document.createElement("p");
+                namePlayer.className = "playerName";
+                namePlayer.textContent = ell.name;
+                let ratingPlayer = document.createElement("p");
+                ratingPlayer.className = "playerRating";
+                ratingPlayer.textContent = "Rating :" + ell.rating
+                let cachePosition = document.createElement("p");
+                cachePosition.className = "hidden-pos";
+                cachePosition.innerText = "rw";
+                cachePosition.style.display = "none";
+                myOption.appendChild(myImage);
+                myOption.appendChild(namePlayer);
+                myOption.appendChild(ratingPlayer);
+                myOption.appendChild(cachePosition);
+                let listModifyForm = formModifyPlayer.querySelector("#playersList");
+                listModifyForm.appendChild(myOption);
+                addClassToOptionModify()
+
+        })
+      }
+
+      if(namePlayerParentNode.className.includes("cb1")){
+        let listJoueurs = data.filter(ell => {
+          return ell.position == "CB"
+        });
+        listJoueurs.forEach(ell => {
+
+                let myOption = document.createElement("div");
+                myOption.className = "option";
+                let myImage = document.createElement("img");
+                myImage.src = ell.photo;
+                let namePlayer = document.createElement("p");
+                namePlayer.className = "playerName";
+                namePlayer.textContent = ell.name;
+                let ratingPlayer = document.createElement("p");
+                ratingPlayer.className = "playerRating";
+                ratingPlayer.textContent = "Rating :" + ell.rating
+                let cachePosition = document.createElement("p");
+                cachePosition.className = "hidden-pos";
+                cachePosition.innerText = "rw";
+                cachePosition.style.display = "none";
+                myOption.appendChild(myImage);
+                myOption.appendChild(namePlayer);
+                myOption.appendChild(ratingPlayer);
+                myOption.appendChild(cachePosition);
+                let listModifyForm = formModifyPlayer.querySelector("#playersList");
+                listModifyForm.appendChild(myOption);
+                addClassToOptionModify()
+
+        })
+      }
+
+      if(namePlayerParentNode.className.includes("cb2")){
+        let listJoueurs = data.filter(ell => {
+          return ell.position == "CB"
+        });
+        listJoueurs.forEach(ell => {
+
+                let myOption = document.createElement("div");
+                myOption.className = "option";
+                let myImage = document.createElement("img");
+                myImage.src = ell.photo;
+                let namePlayer = document.createElement("p");
+                namePlayer.className = "playerName";
+                namePlayer.textContent = ell.name;
+                let ratingPlayer = document.createElement("p");
+                ratingPlayer.className = "playerRating";
+                ratingPlayer.textContent = "Rating :" + ell.rating
+                let cachePosition = document.createElement("p");
+                cachePosition.className = "hidden-pos";
+                cachePosition.innerText = "rw";
+                cachePosition.style.display = "none";
+                myOption.appendChild(myImage);
+                myOption.appendChild(namePlayer);
+                myOption.appendChild(ratingPlayer);
+                myOption.appendChild(cachePosition);
+                let listModifyForm = formModifyPlayer.querySelector("#playersList");
+                listModifyForm.appendChild(myOption);
+                addClassToOptionModify()
+
+        })
+      }
+
+      if(namePlayerParentNode.className.includes("gk")){
+        let listJoueurs = data.filter(ell => {
+          return ell.position == "GK"
+        });
+        listJoueurs.forEach(ell => {
+
+                let myOption = document.createElement("div");
+                myOption.className = "option";
+                let myImage = document.createElement("img");
+                myImage.src = ell.photo;
+                let namePlayer = document.createElement("p");
+                namePlayer.className = "playerName";
+                namePlayer.textContent = ell.name;
+                let ratingPlayer = document.createElement("p");
+                ratingPlayer.className = "playerRating";
+                ratingPlayer.textContent = "Rating :" + ell.rating
+                let cachePosition = document.createElement("p");
+                cachePosition.className = "hidden-pos";
+                cachePosition.innerText = "rw";
+                cachePosition.style.display = "none";
+                myOption.appendChild(myImage);
+                myOption.appendChild(namePlayer);
+                myOption.appendChild(ratingPlayer);
+                myOption.appendChild(cachePosition);
+                let listModifyForm = formModifyPlayer.querySelector("#playersList");
+                listModifyForm.appendChild(myOption);
+                addClassToOptionModify()
+
+        })
+      }
+
+ 
+    });
+  });
+
+  //cancel button for modify form
+  let cancelButtonModifyForm = document.getElementById("cancelModify");
+  cancelButtonModifyForm.addEventListener("click", () => {
+    let parentNodeModify = cancelButtonModifyForm.parentNode.parentNode;
+    let playerListModify = parentNodeModify.querySelector("#playersList");
+    playerListModify.innerHTML = "";
+    parentNodeModify.style.display = "none"
+
   })
