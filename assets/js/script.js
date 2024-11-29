@@ -1285,3 +1285,22 @@ let playerNameModify = "";
     let formAddPlayer = document.getElementById("formAddPlayer");
     formAddPlayer.style.display = "block";
   })
+
+  //cancel button for add player form
+  let cancelPlayerFormAddPlayer = document.getElementById("cancelPlayerFormAddPlayer");
+  cancelPlayerFormAddPlayer.addEventListener("click", (e) => {
+    e.preventDefault();
+    viderFormAddPlayer();
+    let formAddPlayer = document.getElementById("formAddPlayer");
+    formAddPlayer.style.display = "none";
+
+  });
+
+  function viderFormAddPlayer(){
+    document.getElementById("inputName").value = ""
+    document.getElementById("inputPlayerPhoto").value = "";
+    document.getElementById("addPlayerClub").value = "";
+    document.getElementById("rating").value = "";
+    document.getElementById("diving").value = "";
+    document.getElementById("kicking").value = "";
+  }
