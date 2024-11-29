@@ -215,6 +215,7 @@ img.playerImage{
     border-radius: 50px;
     color: white;
     padding-top: 10px;
+    overflow: hidden;
 }
 #playersList{
     height: 500px;
@@ -232,13 +233,20 @@ img.playerImage{
     padding: 5px;
 }
 
-#buttonAddForm button{
+#buttonAddForm button, #addPlayerButton, #addPlayerFormAddPlayer, #cancelPlayerFormAddPlayer{
     width: 100px;
     height: 30px;
     color: white;
     background-color: chocolate;
     border: none;
     border-radius: 5px;
+}
+
+#addPlayerButton{
+    position: absolute;
+    right: 0;
+    margin-top: 6px;
+
 }
 #buttonAddForm{
     display: flex;
@@ -257,8 +265,30 @@ img.playerImage{
     border-radius: 50px;
     color: white;
     padding-top: 10px;
+    overflow: hidden;
 }
-
+#formAddPlayer{
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 250px);
+    width: 500px;
+    height: 80vh;
+    background-color:rgba(36, 18, 69, 0.7);
+    z-index: 100;
+    border-radius: 50px;
+    color: white;
+    padding-top: 10px;
+    overflow: hidden;
+}
+#inputs{
+    height: 520px;
+    overflow-y: scroll;
+}
+#buttonsFormAddPlayer{
+    display: flex;
+    justify-content: space-around;
+}
 #buttonModifyForm button{
     width: 100px;
     height: 30px;
@@ -273,6 +303,9 @@ img.playerImage{
 }
 .addPlClicked{
     background-color: rgb(71, 71, 61);
+}
+.addPlClicked1{
+    background-color: rgb(197, 150, 40);
 }
 
 /* Les media query */

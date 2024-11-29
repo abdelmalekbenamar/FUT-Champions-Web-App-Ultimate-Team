@@ -440,12 +440,12 @@ let playerNameModify = "";
     let optionss = formAjouter.querySelectorAll(".option");
     optionss.forEach(el => {
         el.addEventListener("click", () => {
-            let elemDejaSelect = document.querySelector(".addPlClicked");
+            let elemDejaSelect = document.querySelector(".addPlClicked1");
             if(elemDejaSelect){
-                elemDejaSelect.classList.remove("addPlClicked")
-                el.classList.add("addPlClicked")
+                elemDejaSelect.classList.remove("addPlClicked1")
+                el.classList.add("addPlClicked1")
             }else{
-                el.classList.add("addPlClicked")
+                el.classList.add("addPlClicked1")
             }
         })
     })
@@ -931,7 +931,7 @@ let playerNameModify = "";
                 ratingPlayer.textContent = "Rating :" + ell.rating
                 let cachePosition = document.createElement("p");
                 cachePosition.className = "hidden-pos";
-                cachePosition.innerText = "rw";
+                cachePosition.innerText = "st";
                 cachePosition.style.display = "none";
                 myOption.appendChild(myImage);
                 myOption.appendChild(namePlayer);
@@ -962,7 +962,7 @@ let playerNameModify = "";
                 ratingPlayer.textContent = "Rating :" + ell.rating
                 let cachePosition = document.createElement("p");
                 cachePosition.className = "hidden-pos";
-                cachePosition.innerText = "rw";
+                cachePosition.innerText = "lw";
                 cachePosition.style.display = "none";
                 myOption.appendChild(myImage);
                 myOption.appendChild(namePlayer);
@@ -993,7 +993,7 @@ let playerNameModify = "";
                 ratingPlayer.textContent = "Rating :" + ell.rating
                 let cachePosition = document.createElement("p");
                 cachePosition.className = "hidden-pos";
-                cachePosition.innerText = "rw";
+                cachePosition.innerText = "cm3";
                 cachePosition.style.display = "none";
                 myOption.appendChild(myImage);
                 myOption.appendChild(namePlayer);
@@ -1024,7 +1024,7 @@ let playerNameModify = "";
                 ratingPlayer.textContent = "Rating :" + ell.rating
                 let cachePosition = document.createElement("p");
                 cachePosition.className = "hidden-pos";
-                cachePosition.innerText = "rw";
+                cachePosition.innerText = "cm2";
                 cachePosition.style.display = "none";
                 myOption.appendChild(myImage);
                 myOption.appendChild(namePlayer);
@@ -1055,7 +1055,7 @@ let playerNameModify = "";
                 ratingPlayer.textContent = "Rating :" + ell.rating
                 let cachePosition = document.createElement("p");
                 cachePosition.className = "hidden-pos";
-                cachePosition.innerText = "rw";
+                cachePosition.innerText = "cm1";
                 cachePosition.style.display = "none";
                 myOption.appendChild(myImage);
                 myOption.appendChild(namePlayer);
@@ -1086,7 +1086,7 @@ let playerNameModify = "";
                 ratingPlayer.textContent = "Rating :" + ell.rating
                 let cachePosition = document.createElement("p");
                 cachePosition.className = "hidden-pos";
-                cachePosition.innerText = "rw";
+                cachePosition.innerText = "rb";
                 cachePosition.style.display = "none";
                 myOption.appendChild(myImage);
                 myOption.appendChild(namePlayer);
@@ -1117,7 +1117,7 @@ let playerNameModify = "";
                 ratingPlayer.textContent = "Rating :" + ell.rating
                 let cachePosition = document.createElement("p");
                 cachePosition.className = "hidden-pos";
-                cachePosition.innerText = "rw";
+                cachePosition.innerText = "lb";
                 cachePosition.style.display = "none";
                 myOption.appendChild(myImage);
                 myOption.appendChild(namePlayer);
@@ -1148,7 +1148,7 @@ let playerNameModify = "";
                 ratingPlayer.textContent = "Rating :" + ell.rating
                 let cachePosition = document.createElement("p");
                 cachePosition.className = "hidden-pos";
-                cachePosition.innerText = "rw";
+                cachePosition.innerText = "cb1";
                 cachePosition.style.display = "none";
                 myOption.appendChild(myImage);
                 myOption.appendChild(namePlayer);
@@ -1179,7 +1179,7 @@ let playerNameModify = "";
                 ratingPlayer.textContent = "Rating :" + ell.rating
                 let cachePosition = document.createElement("p");
                 cachePosition.className = "hidden-pos";
-                cachePosition.innerText = "rw";
+                cachePosition.innerText = "cb2";
                 cachePosition.style.display = "none";
                 myOption.appendChild(myImage);
                 myOption.appendChild(namePlayer);
@@ -1210,7 +1210,7 @@ let playerNameModify = "";
                 ratingPlayer.textContent = "Rating :" + ell.rating
                 let cachePosition = document.createElement("p");
                 cachePosition.className = "hidden-pos";
-                cachePosition.innerText = "rw";
+                cachePosition.innerText = "gk";
                 cachePosition.style.display = "none";
                 myOption.appendChild(myImage);
                 myOption.appendChild(namePlayer);
@@ -1235,4 +1235,46 @@ let playerNameModify = "";
     playerListModify.innerHTML = "";
     parentNodeModify.style.display = "none"
 
+  })
+
+  //save button for modify form
+  const modifyButtonForm = document.getElementById("saveModify");
+  modifyButtonForm.addEventListener("click", () => {
+    const elemSelecModifyForm = document.querySelector(".addPlClicked1");
+    let hiddenElemModifyFormNode = elemSelecModifyForm.querySelector(".hidden-pos");
+    let hiddenElemPositionModifyForm = hiddenElemModifyFormNode.textContent;
+    let namePlayerModifyFormNode = elemSelecModifyForm.querySelector(".playerName");
+    let namePlayerModifyForm = namePlayerModifyFormNode.textContent;
+    let playerSurTerrain = document.querySelector(`.${hiddenElemPositionModifyForm}`);
+    let fournitureModify = playerSurTerrain.querySelector("#fourniture");
+    fournitureModify.innerHTML = "";
+    for(let i = 0; i < data1.length; i++){
+      if(data1[i].name == playerNameModify){
+        data.push(data1[i]);
+        break;
+      }
+    }
+    for(let i = 0; i < data.length; i++){
+      if(data[i].name == namePlayerModifyForm){
+
+          let imgPlayerTerrain = document.createElement("img");
+          let namePlayerTerrain = document.createElement("p");
+          let positionTerrain = document.createElement("p");
+          imgPlayerTerrain.src = data[i].photo;
+          imgPlayerTerrain.className = "playerImage";
+          namePlayerTerrain.textContent = data[i].name;
+          namePlayerTerrain.className = "namePlayerTerrain";
+          positionTerrain.textContent = data[i].position;
+          positionTerrain.className = "position";
+          fournitureModify.appendChild(imgPlayerTerrain);
+          fournitureModify.appendChild(namePlayerTerrain);
+          fournitureModify.appendChild(positionTerrain);
+          data.splice(i, 1);
+          break;
+
+      }
+    }
+    let modifyForm = document.getElementById("formModify");
+    modifyForm.style.display = "none"
+    modifyForm.querySelector("#playersList").innerHTML = "";
   })

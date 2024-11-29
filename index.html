@@ -143,8 +143,8 @@
                     <div class="poitrine"></div>
                 </div>
             </div>
+            <button id="addPlayerButton">Add Player</button>
         </div>
-        <div id="strategy">4-3-3</div>
     </main>
     
     <div id="formAdd">
@@ -172,6 +172,39 @@
             <button id="cancelModify">Cancel</button>
             <button id="saveModify">Save</button>
         </div>
+    </div>
+
+    <div id="formAddPlayer">
+        <div id="inputs">
+            <label for="inputName">Name:</label>
+            <input type="text" id="inputName">
+            <label for="inputPlayerPhoto">Player Photo</label>
+            <input type="text" id="inputPlayerPhoto">
+            <label for="inputPosition">Position:</label>
+            <select name="" id="inputPosition">
+                <option value="LW">LW</option>
+                <option value="ST">ST</option>
+                <option value="RW">RW</option>
+                <option value="CM">CM</option>
+                <option value="CB">CB</option>
+                <option value="LB">LB</option>
+                <option value="RB">RB</option>
+                <option value="GK">GK</option>
+            </select>
+            <label for="inputNationality">Nationality</label>
+            <select name="" id="inputNationality">
+                <option value="AE">United Arab Emirates</option>
+                <option value="AR">Argentina</option>
+                <option value="AU">Australia</option>
+                <option value="Canada">Canada</option>
+                <option value="Espagne">Espagne</option>
+            </select>
+        </div>
+        <div id="buttonsFormAddPlayer">
+            <button id="cancelPlayerFormAddPlayer">Cancel</button>
+            <button id="addPlayerFormAddPlayer">Add</button>
+        </div>
+
     </div>
 
     <script src="./assets/js/script.js"></script>
