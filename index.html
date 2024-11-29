@@ -21,6 +21,7 @@
                 <div id="defDemiCerB"></div>
                 <div id="milieuDemiCerB"></div>
             </div>
+            
             <!-- Players -->
             <div class="player rw">
                 <div id="buttons">
@@ -175,35 +176,56 @@
     </div>
 
     <div id="formAddPlayer">
-        <div id="inputs">
-            <label for="inputName">Name:</label>
-            <input type="text" id="inputName">
-            <label for="inputPlayerPhoto">Player Photo</label>
-            <input type="text" id="inputPlayerPhoto">
-            <label for="inputPosition">Position:</label>
-            <select name="" id="inputPosition">
-                <option value="LW">LW</option>
-                <option value="ST">ST</option>
-                <option value="RW">RW</option>
-                <option value="CM">CM</option>
-                <option value="CB">CB</option>
-                <option value="LB">LB</option>
-                <option value="RB">RB</option>
-                <option value="GK">GK</option>
-            </select>
-            <label for="inputNationality">Nationality</label>
-            <select name="" id="inputNationality">
-                <option value="AE">United Arab Emirates</option>
-                <option value="AR">Argentina</option>
-                <option value="AU">Australia</option>
-                <option value="Canada">Canada</option>
-                <option value="Espagne">Espagne</option>
-            </select>
-        </div>
-        <div id="buttonsFormAddPlayer">
-            <button id="cancelPlayerFormAddPlayer">Cancel</button>
-            <button id="addPlayerFormAddPlayer">Add</button>
-        </div>
+        <form action="">
+
+            <div id="inputs">
+                <label for="inputName">Name:</label>
+                <input required type="text" id="inputName">
+                <label for="inputPlayerPhoto">Player Photo</label>
+                <input required type="text" id="inputPlayerPhoto">
+                <label for="inputPosition">Position:</label>
+                <select name="" id="inputPosition">
+                    <option value="LW">LW</option>
+                    <option value="ST">ST</option>
+                    <option value="RW">RW</option>
+                    <option value="CM">CM</option>
+                    <option value="CB">CB</option>
+                    <option value="LB">LB</option>
+                    <option value="RB">RB</option>
+                    <option value="GK">GK</option>
+                </select>
+                <label for="inputNationality">Nationality</label>
+                <select name="" id="inputNationality">
+                    <option value="AE">United Arab Emirates</option>
+                    <option value="AR">Argentina</option>
+                    <option value="AU">Australia</option>
+                    <option value="BE">Belgium</option>
+                    <option value="BH">Bahrain</option>
+                    <option value="BR">Brazil</option>
+                    <option value="CA">Canada</option>
+                    <option value="CH">Switzerland</option>
+                    <option value="CN">China</option>
+                    <option value="DE">Germany</option>
+                    <option value="DZ">Algeria</option>
+                    <option value="ES">Spain</option>
+                    <option value="FI">Finland</option>
+                    <option value="FR">France</option>
+                    <option value="GB">United Kingdom</option>
+                </select>
+                <label for="addPlayerClub">Club:</label>
+                <input required type="text" id="addPlayerClub">
+                <label for="rating">Rating:</label>
+                <input required min="0" max="100" type="number" id="rating">
+                <label for="diving">Diving:</label>
+                <input required min="0" max="100" type="number" id="diving">
+                <label for="kicking">Kicking:</label>
+                <input required min="0" max="100" type="number" id="kicking">
+            </div>
+            <div id="buttonsFormAddPlayer">
+                <button id="cancelPlayerFormAddPlayer">Cancel</button>
+                <button id="addPlayerFormAddPlayer">Add</button>
+            </div>
+        </form>
 
     </div>
 

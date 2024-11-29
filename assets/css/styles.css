@@ -268,7 +268,7 @@ img.playerImage{
     overflow: hidden;
 }
 #formAddPlayer{
-    display: block;
+    display: none;
     position: absolute;
     top: 10px;
     left: calc(50% - 250px);
@@ -306,6 +306,19 @@ img.playerImage{
 }
 .addPlClicked1{
     background-color: rgb(197, 150, 40);
+}
+label, input, select{
+    display: block;
+    width: 70%;
+    margin: auto;
+    border: none;
+}
+label{
+    margin-top: 10px;
+}
+input, select{
+    padding: 5px;
+    border-radius: 5px;
 }
 
 /* Les media query */

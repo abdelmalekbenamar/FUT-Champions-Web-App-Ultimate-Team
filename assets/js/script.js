@@ -1278,3 +1278,10 @@ let playerNameModify = "";
     modifyForm.style.display = "none"
     modifyForm.querySelector("#playersList").innerHTML = "";
   })
+
+  //add player button on click
+  let addPlayerTerrainButt = document.getElementById("addPlayerButton");
+  addPlayerTerrainButt.addEventListener("click", () => {
+    let formAddPlayer = document.getElementById("formAddPlayer");
+    formAddPlayer.style.display = "block";
+  })
