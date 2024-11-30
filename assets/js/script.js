@@ -1296,6 +1296,7 @@ let playerNameModify = "";
 
   });
 
+  //fonction pour vider les inputs dans le formulaire d ajout de joueur
   function viderFormAddPlayer(){
     document.getElementById("inputName").value = ""
     document.getElementById("inputPlayerPhoto").value = "";
@@ -1304,3 +1305,42 @@ let playerNameModify = "";
     document.getElementById("diving").value = "";
     document.getElementById("kicking").value = "";
   }
+
+
+//button add add player form
+const addButtonAddPlayerForm = document.getElementById("addPlayerFormAddPlayer");
+addButtonAddPlayerForm.addEventListener("click", (e) => {
+  e.preventDefault();
+  const inputName = document.getElementById("inputName");
+  let inputNameText = inputName.value;
+  const inputPlayerPhoto = document.getElementById("inputPlayerPhoto");
+  let inputPlayerPhotoText = inputPlayerPhoto.value;
+  const inputPosition = document.getElementById("inputPosition");
+  let inputPositionText = inputPosition.value;
+  const inputNationality = document.getElementById("inputNationality");
+  let inputNationalityText = inputNationality.value;
+  const addPlayerClub = document.getElementById("addPlayerClub");
+  let addPlayerClubText = addPlayerClub.value;
+  const rating = document.getElementById("rating");
+  let ratingText = rating.value;
+  const diving = document.getElementById("diving");
+  let divingText = diving.value;
+  const kicking = document.getElementById("kicking");
+  let kickingText = kicking.value;
+  let objetJoueur = {
+      "name": inputNameText,
+      "photo": inputPlayerPhotoText,
+      "position": inputPositionText,
+      "nationality": inputNationalityText,
+      "flag": `https://flagsapi.com/${inputNationalityText}/flat/32.png`,
+      "rating": parseInt(ratingText),
+      "diving": parseInt(divingText),
+      "kicking": parseInt(kickingText)
+      };
+      data.push(objetJoueur);
+      data1.push(objetJoueur);
+      console.log(data1);
+      const addPlayerForm = document.getElementById("formAddPlayer");
+      addPlayerForm.style.display = "none";
+      
+})

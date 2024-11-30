@@ -222,9 +222,9 @@ img.playerImage{
     overflow-y: scroll;
 }
 .option img{
-    width: 60px;
+    width: 80px;
     display: block;
-    border-radius: 50%;
+    border-radius: 100%;
 }
 .option{
     display: flex;
