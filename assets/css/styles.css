@@ -207,8 +207,8 @@ img.playerImage{
     display: none;
     position: absolute;
     top: 10px;
-    left: calc(50% - 25vw);
-    width: 50vw;
+    left: calc(50% - 200px);
+    width: 400px;
     height: 80vh;
     background-color:rgba(36, 18, 69, 0.7);
     z-index: 100;
@@ -257,8 +257,8 @@ img.playerImage{
     display: none;
     position: absolute;
     top: 10px;
-    left: calc(50% - 25vw);
-    width: 50vw;
+    left: calc(50% - 200px);
+    width: 400px;
     height: 80vh;
     background-color:rgba(36, 18, 69, 0.7);
     z-index: 100;
@@ -345,5 +345,52 @@ input, select{
     #defDemiCerH{
         width: 90px;
         left: calc(50% - 45px);
+    }
+
+    .gk{
+        bottom: 0px;
+        left: calc(50% - 50px);
+        background-color: transparent;
+        z-index: 100;
+    }
+    .cb1{
+        bottom: 130px;
+        left: 210px;
+    }
+    .cb2{
+        bottom: 130px;
+        right: 210px;
+    }
+    .lb{
+        bottom: 160px;
+        left: 10px;
+    }
+    .rb{
+        bottom: 160px;
+        right: 10px;
+    }
+    .cm1{
+        bottom: 320px;
+        left: 20px;
+    }
+    .cm2{
+        bottom: 320px;
+        left: calc(50% - 50px);
+    }
+    .cm3{
+        bottom: 320px;
+        right: 20px;
+    }
+    .st{
+        top: 30px;
+        left: calc(50% - 50px);
+    }
+    .rw{
+        top: 30px;
+        right: 60px;
+    }
+    .lw{
+        top: 30px;
+        left: 60px;
     }
 }
